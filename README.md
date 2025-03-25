@@ -16,4 +16,4 @@ Q.. 7) Predict RR’s expected score at Chinnaswamy Stadium based on past perfor
 
 Q.8) Predict the impact of toss result on RR’s match-winning probability in away games.
 
-Q.9) Predict RR’s highest run-scorer in a match based on past trends against a specific opponent. 
+Q.9) Predict RR’s highest run-scorer in a match based on past trends against a specific opponent.
