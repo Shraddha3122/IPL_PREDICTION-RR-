@@ -1,0 +1,145 @@
+🏏 Problem Statement:
+Q.1) Predict whether RR will win or lose a match based on toss result, venue, and opposition.
+
+Q.2) Predict RR’s match outcome based on first-innings total and powerplay score.
+
+Q.3) Predict whether RR should bat or bowl first based on past win/loss data at a specific venue
+
+Q.4) Predict whether RR will win a match if they score below 160 in the first innings.
+
+Q. 5) Predict the most probable player of the match from RR based on performance trends.
+
+Q. 6) Predict whether RR will qualify for the playoffs based on their performance in the first 7 matches of a season.
+
+Q.. 7) Predict RR’s expected score at Chinnaswamy Stadium based on past performances.
+
+Q.8) Predict the impact of toss result on RR’s match-winning probability in away games.
+
+Q.9) Predict RR’s highest run-scorer in a match based on past trends against a specific opponent. 
+---
+
+API: Predict Match Outcome
+REQUEST:
+POST /predict_match
+{
+  "toss_winner": "Rajasthan Royals",
+  "venue": "M Chinnaswamy Stadium",
+  "team1": "Rajasthan Royals",
+  "team2": "Mumbai Indians"
+}
+RESPONSE:
+{
+  "match_outcome": "Rajasthan Royals Win"
+}
+
+---
+
+API: Predict Score Outcome
+REQUEST:
+POST /predict_score
+{
+  "win_by_runs": 180,
+  "powerplay_score": 45
+}
+RESPONSE:
+{
+  "match_outcome": "Rajasthan Royals Win"
+}
+
+---
+
+API: Recommend Toss Decision
+REQUEST:
+POST /recommend_toss
+{
+  "venue": "M Chinnaswamy Stadium",
+  "toss_winner": "Rajasthan Royals"
+}
+RESPONSE:
+{
+  "recommended_decision": "Bat"
+}
+
+---
+
+API: Predict Low Score Probability
+REQUEST:
+POST /predict_low_score
+{
+  "win_by_runs": 150
+}
+RESPONSE:
+{
+  "low_score_probability": 0.72
+}
+
+---
+
+API: Predict Player of the Match
+REQUEST:
+POST /predict_player
+{
+  "venue": "Sawai Mansingh Stadium",
+  "team1": "Rajasthan Royals",
+  "team2": "Chennai Super Kings"
+}
+RESPONSE:
+{
+  "player_of_the_match": "Sanju Samson"
+}
+
+---
+
+API: Predict Playoff Qualification
+REQUEST:
+POST /predict_playoffs
+{
+  "wins_in_first_7_matches": 5
+}
+RESPONSE:
+{
+  "playoff_qualification": "Yes"
+}
+
+---
+
+API: Predict Expected Score at Chinnaswamy
+REQUEST:
+POST /predict_chinnaswamy_score
+{
+  "team1": "Rajasthan Royals",
+  "team2": "Royal Challengers Bangalore"
+}
+RESPONSE:
+{
+  "expected_score": 180
+}
+
+---
+
+API: Predict Toss Impact on Away Games
+REQUEST:
+POST /predict_toss_impact
+{
+  "venue": "M Chinnaswamy Stadium",
+  "toss_winner": "Rajasthan Royals"
+}
+RESPONSE:
+{
+  "win_probability_after_toss": 0.65
+}
+
+---
+
+API: Predict Highest Scorer
+REQUEST:
+POST /predict_highest_scorer
+{
+  "venue": "M Chinnaswamy Stadium",
+  "team1": "Rajasthan Royals",
+  "team2": "Mumbai Indians"
+}
+RESPONSE:
+{
+  "highest_scorer": "Jos Buttler"
+}
